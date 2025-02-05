@@ -18,7 +18,7 @@ spec:
       containers:
         - name: nxrm-operator-certified
           # Replace this with the built image name
-          image: quay.io/unit-corp/nxrm-operator-certified:3.74.0
+          image: quay.io/unit-corp/nxrm-operator-certified:3.77.0
           imagePullPolicy: Always
           securityContext:
             allowPrivilegeEscalation: false
@@ -40,4 +40,4 @@ spec:
             - name: OPERATOR_NAME
               value: "nxrm-operator-certified"
             - name: RELATED_IMAGE_NEXUS
-              value: registry.connect.redhat.com/sonatype/nexus-repository-manager@sha256:8f5c6e8ec1131e81756a837d5a1d178deeb58468af9637d04b46405b465fa22a
+              value: docker.io/sonatype/nexus3@sha256:9bc9cbb0a58719daac1e2448210aa7af790e81cb698855989a43295a664b39a3

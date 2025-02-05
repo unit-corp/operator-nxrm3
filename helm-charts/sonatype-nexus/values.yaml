@@ -34,7 +34,7 @@ nexus:
     - name: NEXUS_SECURITY_RANDOMPASSWORD
       value: "false"
   hostAliases: []
-  imageName: registry.connect.redhat.com/sonatype/nexus-repository-manager:3.74.0-ubi-1
+  imageName: registry.connect.redhat.com/sonatype/nexus-repository-manager:3.77.0-ubi
   imagePullPolicy: IfNotPresent
   imagePullSecret: ""
   livenessProbe:
