@@ -3,7 +3,7 @@
 apiVersion: sonatype.com/v1alpha1
 kind: NexusRepo
 metadata:
-  name: example-nexusrepo
+  name: nexusrepo
 spec:
   # Default values copied from <project_dir>/helm-charts/sonatype-nexus/values.yaml
 
@@ -36,9 +36,7 @@ spec:
     dockerPort: 5003
     env:
       - name: INSTALL4J_ADD_VM_PARAMS
-        value: -Xms2703M -Xmx2703M -XX:MaxDirectMemorySize=2703M -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
-      - name: NEXUS_SECURITY_RANDOMPASSWORD
-        value: "false"
+        value: -Xms2703M -Xmx2703M -XX:MaxDirectMemorySize=2703M -XX:+UnlockExperimentalVMOptions -Djava.util.prefs.userRoot=${NEXUS_DATA}/javaprefs
     hostAliases: []
     imageName: docker.io/sonatype/nexus3@sha256:9bc9cbb0a58719daac1e2448210aa7af790e81cb698855989a43295a664b39a3
     imagePullPolicy: IfNotPresent
